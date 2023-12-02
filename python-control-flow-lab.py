@@ -11,12 +11,11 @@
 # Hints:  Use the in operator to check if a character is in another string
 #         For example, if some_char in 'abc':
 
-def check_vowel():
-  letter = input("Please Enter a Letter: ")[0]
+def check_vowel(letter):
   result = "vowel" if letter.lower() in "aeiou" else "consonant"
   print(f"{letter.upper()} is a {result}.")
 
-check_vowel()
+check_vowel(input("Please Enter a Letter: ")[0])
 
 # exercise-02 Length of Phrase
 
@@ -27,9 +26,13 @@ check_vowel()
 #      - What you entered is xx characters long
 # 3. Return to step 1, unless the word 'quit' was entered.
 
+def phrase_length():
+  phrase = ""
+  while phrase.lower() != "quit":
+    phrase = input("Please enter a phrase or type 'quit' to exit: ")
+    if phrase.lower() != "quit": print(f"What you entered is {len(phrase)} characters long.")
 
-
-
+phrase_length()
 
 # exercise-03 Calculate Dog Years
 
