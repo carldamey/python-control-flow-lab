@@ -55,7 +55,7 @@ def dog_years():
   for num in range(age):
     if num < 2: dog_age += 10
     else: dog_age += 7
-  print(f"The dog's age in dog years is{dog_age}.")
+  print(f"The dog's age in dog years is {dog_age}.")
 
 dog_years()
 
@@ -74,10 +74,16 @@ dog_years()
 # 3. Print a message such as:
 #      - A triangle with sides of <a>, <b> & <c> is a <type of triangle> triangle
 
+def triangle_type():
+  a = int(input("Enter length of side a: "))
+  b = int(input("Enter length of side b: "))
+  c = int(input("Enter length of side c: "))
+  if a == b and a == c: result = "equilateral"
+  elif a != b and a !=c and b !=c: result = "scalene"
+  elif a == b or a == c or b == c: result = "isoceles"
+  print(f"A triangle with side lengths of {a}, {b}, & {c} is a(n) {result} triangle.")
 
-
-
-
+triangle_type()
 
 # exercise-05 Fibonacci sequence for first 50 terms
 
