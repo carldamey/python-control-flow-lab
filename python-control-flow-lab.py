@@ -49,9 +49,15 @@ phrase_length()
 # Use the int() function to convert the string returned from input() into an integer
 # Start with an if that checks if the age is less than 3
 
+def dog_years():
+  dog_age = 0
+  age = int(input("Enter a dog's age: "))
+  for num in range(age):
+    if num < 2: dog_age += 10
+    else: dog_age += 7
+  print(f"The dog's age in dog years is{dog_age}.")
 
-
-
+dog_years()
 
 # exercise-04 What kind of Triangle?
 
