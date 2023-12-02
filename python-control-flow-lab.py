@@ -103,9 +103,14 @@ triangle_type()
 # Use a while loop with a looping variable, or look into Python ranges, e.g.:
 #   for n in range(50):
 
+def fibonacci_first_50():
+  terms = [0, 1]
+  while len(terms) < 50:
+    new_term = terms[-1] + terms[-2]
+    terms.append(new_term)
+  print("\n".join(str(term) for term in terms))
 
-
-
+fibonacci_first_50()
 
 # exercise-06 What's the Season?
 
