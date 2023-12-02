@@ -11,9 +11,12 @@
 # Hints:  Use the in operator to check if a character is in another string
 #         For example, if some_char in 'abc':
 
+def check_vowel():
+  letter = input("Please Enter a Letter: ")[0]
+  result = "vowel" if letter.lower() in "aeiou" else "consonant"
+  print(f"{letter.upper()} is a {result}.")
 
-
-
+check_vowel()
 
 # exercise-02 Length of Phrase
 
