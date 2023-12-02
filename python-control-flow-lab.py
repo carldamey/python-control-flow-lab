@@ -133,3 +133,22 @@ fibonacci_first_50()
 #
 # After setting the likely season, you can use another if...elif...else statement to "adjust" if
 # the day number falls within a certain range.
+
+def check_season():
+  months = ["dec", "jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sep", "oct", "nov"]
+  month = input("Please enter the first 3 letters of the month: ")
+  day = int(input("Please enter the day: "))
+
+  if month.lower() == "mar" and day > 19: season = "Spring"
+  elif month.lower() == "jun" and day > 20: season = "Summer"
+  elif month.lower() == "sep" and day > 21: season = "Fall"
+  elif month.lower() == "dec" and day > 20: season = "Winter"
+  elif months.index(month) <= 3: season = "Winter"
+  elif months.index(month) <= 6: season = "Spring"
+  elif months.index(month) <= 9: season = "Summer"
+  elif months.index(month) <= 11: season = "Fall"
+
+  print(f"{month.title()} {day} is in {season}")
+
+
+check_season()
